@@ -30,7 +30,7 @@ const proejctData = [
     time: '2023-07-24',
   },
   {
-    link: 'https://react-tvflix.vercel.app',
+    link: 'https://voxo-ecommerce-app.vercel.app',
     imageLight: Images.ProjectImages.voxoLight,
     imageDark: Images.ProjectImages.voxoDark,
     alt: 'Voxo ecommerce project',
