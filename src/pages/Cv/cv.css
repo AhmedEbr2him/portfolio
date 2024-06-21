@@ -1,0 +1,52 @@
+.cv-page .experience {
+  display: grid;
+  gap: 24px;
+}
+.glossary-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+
+  .glossary-item {
+    display: flex;
+    align-items: flex-end;
+
+    &:hover a {
+      color: var(--on-background);
+    }
+    a {
+      font-size: 14px;
+      color: var(--text-color-gray);
+      transition: var(--motion-duration-short-2);
+      line-height: 16px;
+      margin-left: 4px;
+    }
+  }
+}
+.experience-content {
+  .content-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .experience {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+
+    .glossary {
+      grid-column: 1 / 3;
+    }
+    .experience-content {
+      grid-column: 3/7;
+    }
+  }
+  .glossary {
+    position: sticky;
+    top: 24px;
+  }
+}

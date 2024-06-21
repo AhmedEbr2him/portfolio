@@ -1,0 +1,123 @@
+.sidebar {
+  position: fixed;
+  background-color: var(--background-color);
+  height: 100%;
+  z-index: 4;
+  min-width: 310px;
+  transform: translateX(-310px);
+  transition: var(--motion-duration-long) var(--motion-easing-legacy);
+
+  &.active {
+    transform: translateX(0);
+  }
+}
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.sidebar-list {
+  flex: 1;
+
+  .sidebar-top {
+    padding: 16px 16px;
+    border-bottom: 1px solid var(--outline);
+
+    .top-wrapper {
+      padding-inline: 10px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      position: relative;
+    }
+    .text-content {
+      p {
+        font-weight: var(--weight-medium);
+        line-height: 1.5em;
+      }
+      .name {
+        font-size: 18px;
+      }
+      .position {
+        font-size: 12px;
+        color: var(--on-surface-color);
+        font-weight: var(--weight-semibold);
+      }
+    }
+  }
+  .avatar-small {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-circle);
+    overflow: hidden;
+    background-color: var(--on-background);
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-item {
+    padding-inline: 16px;
+    padding-block: 4px;
+    border-bottom: 1px solid var(--outline);
+
+    .menu-link {
+      display: flex;
+      align-items: center;
+      height: 48px;
+      width: 100%;
+      gap: 16px;
+      padding-inline: 10px;
+      position: relative;
+    }
+  }
+}
+.sidebar .theme-switch {
+  padding-inline: 16px;
+  padding-block: 12px;
+
+  .switch-btn {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-content: center;
+    background: var(--section-color);
+    border-radius: 50%;
+    border: 1px solid var(--outline);
+  }
+}
+.social-links {
+  border-top: 1px solid var(--outline);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+
+  .findme {
+    font-size: 14px;
+    font-weight: var(--weight-light);
+    color: var(--on-background);
+    margin-right: 10px;
+  }
+}
+.social-links .social-list {
+  display: flex;
+  gap: 2px;
+  .social-item {
+    border: 1px solid var(--outline);
+    border-radius: 50px;
+
+    a {
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-content: center;
+    }
+
+    &:hover .tooltip {
+      transform: translateX(-50%) scale(1.1);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

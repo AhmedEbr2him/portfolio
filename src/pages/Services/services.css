@@ -1,0 +1,39 @@
+.services-page {
+  .services-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-top: 0;
+  }
+
+  .services-list {
+    gap: 24px;
+  }
+  .services-item {
+    .text {
+      display: block;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .services-page {
+    .services-wrapper {
+      grid-template-columns: repeat(6, 1fr);
+      gap: 24px;
+    }
+    .services-layer {
+      grid-column: 1 / 3;
+    }
+    .services-content {
+      grid-column: span 4;
+    }
+    .services-list {
+      grid-template-columns: 1fr;
+    }
+  }
+  .glossary {
+    position: sticky;
+    top: 24px;
+  }
+}

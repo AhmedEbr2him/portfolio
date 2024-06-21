@@ -1,0 +1,30 @@
+.footer {
+  border-top: 1px solid var(--outline);
+  padding-block: 24px;
+}
+.footer .footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .copyrights {
+    font-size: 14px;
+    padding-block-end: 16px;
+    color: var(--text-color-gray);
+  }
+
+  .links-menu {
+    display: flex;
+    font-size: 14px;
+    gap: 8px;
+
+    .link-item {
+      transition: var(--motion-duration-short-1);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,205 @@
+.header {
+  height: var(--header-height);
+  transition: var(--motion-duration-long) var(--motion-easing-legacy);
+  position: sticky;
+  top: 16px;
+  left: 16px;
+  width: calc(100% - 32px);
+  margin-top: 16px;
+  z-index: 2;
+
+  &.active {
+    transition: var(--motion-duration-long) var(--motion-easing-legacy);
+    top: -160px;
+  }
+}
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--section-color);
+  padding-inline: 10px;
+  border-radius: 8px;
+  height: var(--header-height);
+  backdrop-filter: blur(4px);
+  transition: var(--motion-duration-long) var(--motion-easing-legacy);
+
+  .left-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .text-content {
+      p {
+        font-weight: var(--weight-medium);
+        line-height: 1.5em;
+      }
+      .name {
+        font-size: 18px;
+        display: inline-block;
+      }
+      .position {
+        font-size: 12px;
+        color: var(--on-surface-color);
+        font-weight: var(--weight-semibold);
+      }
+    }
+  }
+  .avatar-small {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-circle);
+    overflow: hidden;
+    background-color: var(--on-background);
+  }
+}
+.right-content {
+  .close-btn {
+    background: var(--background-color);
+    border-radius: 8px;
+
+    svg {
+      transition: var(--motion-duration-medium-1);
+    }
+  }
+}
+.center-content {
+  display: none;
+  .navbar {
+    height: 100%;
+
+    .menu-list {
+      height: 100%;
+      display: flex;
+      gap: 16px;
+    }
+    .menu-item {
+      transition: var(--motion-duration-short-2);
+      a {
+        width: 60px;
+        height: 30px;
+        display: grid;
+        place-content: center;
+        color: var(--text-color-gray);
+        font-size: 15px;
+        transition: var(--motion-duration-short-2);
+      }
+      &:hover {
+        a {
+          color: var(--text-color);
+        }
+      }
+      &.active a {
+        color: var(--text-color);
+      }
+    }
+  }
+}
+/* MOBILE MENU BOTTM */
+.mobile-bottom-menu {
+  position: fixed;
+  bottom: -180px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: var(--motion-duration-long) var(--motion-easing-legacy);
+  z-index: 2;
+
+  &.active {
+    bottom: 18px;
+    transition: var(--motion-duration-long) var(--motion-easing-legacy);
+  }
+}
+.mobile-menu-wrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+
+  :where(.mobile-menu-list, .theme-switch) {
+    border: 1px solid var(--outline);
+    padding: 4px;
+    border-radius: 8px;
+    position: relative;
+    background-color: var(--background-color);
+  }
+
+  :where(.list-item a, .toggle-icon) {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-content: center;
+    padding: 2px;
+  }
+
+  :where(.theme-switch, .list-item):hover .tooltip {
+    transform: translateX(-50%) scale(1.1);
+    opacity: 1;
+    visibility: visible;
+  }
+  .list-item a {
+    position: relative;
+    z-index: 3;
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 38px;
+      height: 38px;
+      background: var(--primary-color);
+      z-index: 1;
+      border-radius: var(--radius-extra-small);
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--motion-duration-short-2);
+    }
+  }
+  .list-item.active a::before {
+    opacity: 0.25;
+    visibility: visible;
+  }
+}
+[data-theme='light'] .theme-switch .dark-icon,
+[data-theme='dark'] .theme-switch .light-icon {
+  display: none;
+}
+.mobile-menu-list {
+  display: flex;
+  align-items: center;
+}
+
+/*------------------------*\
+ - MEDIA QUERIES
+\*------------------------*/
+@media only screen and (min-width: 567px) {
+  .center-content {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .right-content {
+    display: none;
+  }
+  .center-content {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .left-content {
+    .avatar-small {
+      width: 42px;
+      height: 42px;
+    }
+  }
+  .header-wrapper {
+    margin-inline: 48px;
+    padding-inline: 16px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .header-wrapper {
+    margin-inline: 64px;
+  }
+}
