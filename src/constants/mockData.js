@@ -17,7 +17,7 @@ const proejctData = [
     imageDark: Images.ProjectImages.bookDark,
     alt: 'Book search project media',
     title: 'TvFlix movie search web application',
-    tech: 'Reatch Js,API',
+    tech: 'Reatch Js, API',
     time: '2023-10-24',
   },
   {
@@ -26,8 +26,17 @@ const proejctData = [
     imageDark: Images.ProjectImages.tvFlixDark,
     alt: 'TvFlix project media',
     title: 'Bookhub book search web application',
-    tech: 'Reatch Js,API',
+    tech: 'Reatch Js, API',
     time: '2023-07-24',
+  },
+  {
+    link: 'https://react-tvflix.vercel.app',
+    imageLight: Images.ProjectImages.voxoLight,
+    imageDark: Images.ProjectImages.voxoDark,
+    alt: 'Voxo ecommerce project',
+    title: 'Voxo Ecommerce web application',
+    tech: 'Reatch Js',
+    time: '2023-12-24',
   },
 ];
 const servicesData = [
