@@ -38,6 +38,15 @@ const proejctData = [
     tech: 'Reatch Js',
     time: '2023-12-24',
   },
+  {
+    link: 'https://pixstock-react-js.vercel.app/',
+    imageLight: Images.ProjectImages.pixstockLight,
+    imageDark: Images.ProjectImages.pixStockDark,
+    alt: 'PixStock a large stock library',
+    title: 'PixStock images web application',
+    tech: 'Reatch Js, API, Pexels API',
+    time: '2024-7-01',
+  },
 ];
 const servicesData = [
   {

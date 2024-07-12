@@ -8,6 +8,8 @@ import bookLight from './projects/book-light.png';
 import bookDark from './projects/book-dark.png';
 import voxoLight from './projects/voxo-light.png';
 import voxoDark from './projects/voxo-dark.png';
+import pixstockLight from './projects/pixstock-light.png';
+import pixStockDark from './projects/pixstock-dark.png';
 
 const HeaderImages = {
   avatart,
@@ -22,6 +24,8 @@ const ProjectImages = {
   bookDark,
   voxoLight,
   voxoDark,
+  pixstockLight,
+  pixStockDark,
 };
 export const Images = {
   HeaderImages,
