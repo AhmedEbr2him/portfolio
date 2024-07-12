@@ -12,6 +12,7 @@ import {
 import Brief from '../../components/Home/Brief';
 import { useEffect } from 'react';
 import { scrollToTop } from '../../utilities/scrollToTop';
+import { routeConstants } from '../../constants/routesConstants';
 
 const HomePage = () => {
   useEffect(() => {
@@ -30,7 +31,7 @@ const HomePage = () => {
             <div className='projects-layer'>
               <Projects />
               <div className='show-more'>
-                <LinkBtn text={'View all work'} />
+                <LinkBtn text={'View all work'} to={routeConstants.WORK} />
               </div>
             </div>
           </div>
