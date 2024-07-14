@@ -128,11 +128,15 @@ const faqData = [
 
 const skillsData = [
   {
-    title: 'HTML5/CSS3',
+    title: 'HTML5',
+  },
+  {
+    title: 'CSS3',
   },
   {
     title: 'Javascript',
   },
+
   {
     title: 'CSS Frameworks',
   },
@@ -141,6 +145,9 @@ const skillsData = [
   },
   {
     title: 'API',
+  },
+  {
+    title: 'Git & Github',
   },
   {
     title: 'UI/UX Desgin (Basics)',
